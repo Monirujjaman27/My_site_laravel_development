@@ -6,11 +6,11 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center no-gutters">
-            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                <h2 class="mb-2">About Dev MJ</h2>
+            <div class="col-md-12 heading-section text-center mb-5">
+                <h2 data-aos="fade-up" class="mb-2">About Dev MJ</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="slide-left">
             <div class="col-md d-flex align-items-stretch ftco-animate">
                 <div class="media block-6 w-100 services d-block text-center">
                     <div class="icon d-flex justify-content-center align-items-center"><span
@@ -57,16 +57,18 @@
                 </div>
             </div>
         </div>
+
+
         <div class="row wrap-about my-5">
             <div class="col-md-12">
                 <div class="row">
                     @foreach($about as $about)
-                    <div class="col-md-5 order-md-last ftco-animate d-flex">
-                        <div class="img w-100 h-100"
+                    <div class="col-md-5 order-md-last d-flex" data-aos="slide-left">
+                        <div class="img w-100 h-100 ftco-animate animated fadeInRight "
                             style="background-image: url({{ asset('public/storage/about') }}/{{ $about->image}}); min-height:380px;">
                         </div>
                     </div>
-                    <div class="col-md-7 ftco-animate fadeInRight ">
+                    <div class="col-md-7" data-aos="slide-right">
                         <div class="text text-md-right">
                             <h3>{{ $about->name }}</h3>
                             <p class="text-justify">{{ $about->description }}.</p>
@@ -84,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5" data-aos="slide-left">
             <div class="col-md-4">
                 <div class="services-2 d-flex ftco-animate">
                     <span>01</span>
@@ -117,9 +119,13 @@
         <!-- progress-bar -->
         <div class="row mt-5">
             <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                <h2 class="">Professional Skill</h2>
+                <h2 class="" data-aos="fade-up">Professional Skill</h2>
             </div>
-            <div class="col-md-8 col-sm-12 m-auto ftco-animate">
+            <div class="col-md-6 col-sm-12">
+                <img data-aos="fade-up-right" class="img-fluid" src="{{ asset('public/storage/slider') }}/08.png"
+                    alt="">
+            </div>
+            <div class="col-md-6 col-sm-12 m-auto" data-aos="fade-up-left">
                 @foreach($skill as $skill)
                 <div class="m-1">
                     <strong>{{ $skill->name }}</strong>
@@ -131,6 +137,7 @@
                 </div>
                 @endforeach
             </div>
+
         </div>
         <!-- progress-bar -->
     </div>
@@ -140,11 +147,11 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2>Our Works</h2>
+                <h2 data-aos="fade-up">Our Works</h2>
             </div>
         </div>
         <!-- Tabs  -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs" id="myTab" role="tablist" data-aos="slide-right">
             <li class="nav-item" role="presentation">
                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                     aria-selected="true">All</a>
@@ -162,7 +169,8 @@
         <!-- TabContent -->
         <div class="tab-content mt-2" id="myTabContent">
             <!-- all portfolio content  -->
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"
+                data-aos="slide-left">
                 <div class="row d-flex">
                     @foreach($portfolio as $portfolio)
                     <div class="col-md-3 d-flex ftco-animate">
@@ -222,116 +230,48 @@
     <div class="degree-left"></div>
 </section>
 
+<!-- Clients Says About Us section   -->
 <section class="ftco-section testimony-section">
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-8 text-center heading-section ftco-animate">
-                <h2 class="mb-3">Clients Says About Us?</h2>
+                <h2 data-aos="fade-up" class="mb-3">Clients Says About Us?</h2>
             </div>
         </div>
         <div class="row ftco-animate mb-4">
-            <div class="col-md-12">
+            <div class="col-md-12" data-aos="slide-right">
                 <div class="carousel-testimony owl-carousel">
+                    @foreach($testemonial as $testemonial)
                     <div class="item">
                         <div class="testimony-wrap py-4">
                             <div class="text">
                                 <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
+                                <p class="mb-4">{{ Str::limit($testemonial->description, 120) }} <a class="text-danger" href="#">Read More</a></p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img"
-                                        style="background-image: url({{ asset('public/Assets/Frontend') }}/images/person_1.jpg)">
+                                        style="background-image: url({{ asset('public/storage/testimonial') }}/{{ $testemonial->image }})">
                                     </div>
                                     <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
+                                        <p class="name">{{ $testemonial->clientName }}</p>
+                                        <span class="position">{{ $testemonial->label }}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img"
-                                        style="background-image: url({{ asset('public/Assets/Frontend') }}/images/person_2.jpg)">
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img"
-                                        style="background-image: url({{ asset('public/Assets/Frontend') }}/images/person_3.jpg)">
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img"
-                                        style="background-image: url({{ asset('public/Assets/Frontend') }}/images/person_1.jpg)">
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap py-4">
-                            <div class="text">
-                                <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                    Vokalia and Consonantia, there live the blind texts.</p>
-                                <div class="d-flex align-items-center">
-                                    <div class="user-img"
-                                        style="background-image: url({{ asset('public/Assets/Frontend') }}/images/person_2.jpg)">
-                                    </div>
-                                    <div class="pl-3">
-                                        <p class="name">Roger Scott</p>
-                                        <span class="position">Marketing Manager</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
+        <!-- Clients Says About Us section end  -->
 
+        <!-- Get Started -->
         <div class="row mt-5">
-            <div class="col-md-12">
+            <div class="col-md-12" data-aos="slide-left">
                 <div class="intro p-md-4 py-md-5 p-2 rounded img"
                     style="background-image: url({{ asset('public/Assets/Frontend') }}/images/bg_1.jpg);">
                     <div class="col-md-6 ftco-animate">
-                        <span>Get Started</span>
+                        <span data-aos="fade-up-left">Get Started</span>
                         <h2>Fill in the brief and get the project estimate</h2>
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                             there live the blind texts.</p>
@@ -347,7 +287,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2>Recent Blog</h2>
+                <h2 data-aos="fade-up">Recent Blog</h2>
             </div>
         </div>
         <div class="row d-flex">

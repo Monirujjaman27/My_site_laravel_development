@@ -44,7 +44,7 @@ class SliderRepository implements CrudInterface{
             $image = $request->sliderbg;
             $fileName = time().'.'.$image->getClientoriginalExtension();
             $image_resize = Image::make($image)
-                ->resize(1500, 700)
+                ->resize(450, 300)
                 ->save(public_path('storage/slider/'.$fileName));
                 $data->sliderbg = $fileName;
                 $data->save();
@@ -73,7 +73,7 @@ class SliderRepository implements CrudInterface{
             $image = $request->sliderbg;
             $fileName = time().'.'.$image->getClientoriginalExtension();
             $image_resize = Image::make($image)
-                ->resize(1500, 700)
+                ->resize(450, 300)
                 ->save(public_path('storage/slider/'.$fileName));
                 $data->sliderbg = $fileName;
                 $data->save();

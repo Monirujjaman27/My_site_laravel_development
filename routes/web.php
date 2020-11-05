@@ -17,3 +17,7 @@ use App\Http\Controllers\Api\Frontend\HomeController;
 
 Route::resource('/', HomeController::class);
 Route::get('/resume-download/{file}', [HomeController::class, 'downloadResume'])->name('downloadResume');
+// contact page route 
+Route::get('/contact', [HomeController::class, 'contact'])->name('website.contact');
+// about page route 
+Route::get('/about', [HomeController::class, 'about'])->name('website.about');

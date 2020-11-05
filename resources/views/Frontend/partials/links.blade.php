@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="{{ asset('public/Assets/Frontend') }}/css/flaticon.css">
 <!-- bootstrap min css -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<!-- aos.css -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <!-- style css  -->
 <link rel="stylesheet" href="{{ asset('public/Assets/Frontend') }}/css/style.css">
 <link rel="stylesheet" href="{{ asset('public/Assets/Frontend') }}/css/custom.css">

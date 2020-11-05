@@ -10,6 +10,7 @@ use App\Models\Skill;
 use App\Models\Resume;
 use App\Models\Portfolio;
 use App\Models\Category;
+use App\Models\Testimonial;
 class HomeController extends Controller
 {
     /**
@@ -26,6 +27,7 @@ class HomeController extends Controller
         $portfolio   = Portfolio::orderBy('id', 'desc')->paginate(8);
         $category    = Category::orderBy('id', 'ASC')->paginate(5);
         $catId1      = Portfolio::orderBy('id', 'desc')->paginate(8);
+        $testemonial = Testimonial::all();
 
        
         // $categoryPost = Category::with('portfolio')->orderBy('id', 'desc')->paginate(8);
@@ -37,10 +39,15 @@ class HomeController extends Controller
             'resume',
             'portfolio',
             'category',
-            'catId1'
+            'catId1',
+            'testemonial'
             ]));
     }
-
+  /**
+     * Display and download resume of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
 
     public function downloadResume($file)
     {
@@ -48,6 +55,22 @@ class HomeController extends Controller
         
     }
 
+    /**
+     * Display contact page of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function contact()
+    {
+        return view('Frontend.pages.contact');
+    }
+
+
+    public function about()
+    {
+        return view('Frontend.pages.about');
+    }
 
    
 }
