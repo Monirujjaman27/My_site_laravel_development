@@ -35,6 +35,7 @@ route::apiResource('category', CategoryController::class);
 // Slider Resource Routes
 route::apiResource('slider', SliderController::class);
 
+
 // Slider Resource Routes
 route::apiResource('social', SocialController::class);
 
@@ -55,6 +56,5 @@ route::apiResource('portfolio', PortfolioController::class);
 
 // SiteDefault Resource Routes
 route::apiResource('siteDefault', SiteDefaultController::class);
-
 // Logo Resource Routes
 route::apiResource('logo', LogoController::class);

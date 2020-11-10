@@ -43,6 +43,20 @@ class HomeController extends Controller
             'testemonial'
             ]));
     }
+
+  /**
+     * Display and download resume of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function getProtfoliobyid($id)
+    {
+
+        $catId = Portfolio::where('id', $id)->orderBy('id', 'desc')->paginate(8);
+        return response()->json(array('success' => true, 'catId' => $catId));
+    
+    }
   /**
      * Display and download resume of the resource.
      *
@@ -67,9 +81,48 @@ class HomeController extends Controller
     }
 
 
+    /**
+     * Display about page of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function about()
     {
         return view('Frontend.pages.about');
+    }
+
+
+    /**
+     * Display packages page of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function packages()
+    {
+        return view('Frontend.pages.packages');
+    }
+    public function packageDetails()
+    {
+        return view('Frontend.pages.packageDetails');
+    }
+      /**
+     * Display code page of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function code()
+    {
+        return view('Frontend.pages.code');
+    }
+      /**
+     * Display faq page of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function faq()
+    {
+        return view('Frontend.pages.faq');
     }
 
    

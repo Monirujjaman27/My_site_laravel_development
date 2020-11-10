@@ -61,3 +61,13 @@ opacity: .8;
             font-size: 40px; 
             color: rgb(39, 9, 145);
         } 
+
+        .packege-slider-item:hover {
+          box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+      }
+        .shadow-item{
+          box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+      }
+        .shadow-item:hover{
+          box-shadow: none !important;
+      }

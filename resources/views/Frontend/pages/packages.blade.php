@@ -9,6 +9,9 @@
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end">
             <div class="col-md-9 ftco-animate pb-5 mb-5">
+            <div class="pb-5 mb-5">
+            <h1 class="text-center text-white font-weight-bold pb-5 mb-5">Packages</h1>
+            </div>
                 <p class="breadcrumbs"><span class="mr-2">
                         <a href="index.html">Home <i class="fa fa-chevron-right"></i></a>
                     </span> <span>About us <i class="fa fa-chevron-right"></i></span>
@@ -20,169 +23,144 @@
 
 <section class="ftco-section">
     <div class="container">
-        <div class="row justify-content-center no-gutters">
-            <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                <h2 class="mb-2">About us</h2>
+        <!-- packeges section  -->
+        <div class="row justify-content-center my-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 data-aos="fade-up">Packeges</h2>
             </div>
         </div>
-
-
-
         <div class="row">
-            <div class="col-md-2 col-sm-12">
-                <div data-aos="slide-right" class="overflow-hidden card nav flex-column nav-pills" id="v-pills-tab"
-                    role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-tab1" data-toggle="pill" href="#" role="tab"
-                        aria-controls="v-pills-home" aria-selected="true">
-                        <div class="ftco-animate">
-                            <div class="media block-6 w-100 services d-block text-center">
-                                <div class="display-4 d-flex justify-content-center align-items-center"><span
-                                        class="flaticon-vector"></span></div>
-                                <div class="media-body">
-                                    <h3>UI/UX Design</h3>
-                                </div>
-                            </div>
+            <!-- packege Item  -->
+            <div class="col-xl-4 col-md-3 col-sm-12 mb-5">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm shadow-item">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
                         </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-tab2" data-toggle="pill" href="#" role="tab"
-                        aria-controls="v-pills-profile" aria-selected="false">
-                        <div class="d-flex align-items-stretch ftco-animate">
-                            <div class="media block-6 w-100 services d-block text-center">
-                                <div class="display-4 d-flex justify-content-center align-items-center"><span
-                                        class="flaticon-web-programming"></span></div>
-                                <div class="media-body">
-                                    <h3>Web Development</h3>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <a href="#" class="btn btn-lg btn-block btn-secondary text-white">View Package</a>
                         </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-tab3" data-toggle="pill" href="#" role="tab"
-                        aria-controls="v-pills-messages" aria-selected="false">
-                        <div class="d-flex align-items-stretch ftco-animate">
-                            <div class="media block-6 w-100 services d-block text-center">
-                                <div class="display-4 d-flex justify-content-center align-items-center"><span
-                                        class="flaticon-layer"></span></div>
-                                <div class="media-body">
-                                    <h3>Product Design</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-tab4" data-toggle="pill" href="#" role="tab"
-                        aria-controls="v-pills-settings" aria-selected="false">
-                        <div class="d-flex align-items-stretch ftco-animate">
-                            <div class="media block-6 w-100 services d-block text-center">
-                                <div class="display-4 d-flex justify-content-center align-items-center"><span
-                                        class="flaticon-coding"></span></div>
-                                <div class="media-body">
-                                    <h3>Mobile Apps</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="nav-link" id="v-pills-tab5" data-toggle="pill" href="#" role="tab"
-                        aria-controls="v-pills-settings" aria-selected="false">
-                        <div class="d-flex align-items-stretch ftco-animate">
-                            <div class="media block-6 w-100 services d-block text-center">
-                                <div class="display-4 d-flex justify-content-center align-items-center"><span
-                                        class="flaticon-zoom"></span></div>
-                                <div class="media-body">
-                                    <h3>SEO</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-            <style>
-            .wrap-about.border-left-2px.position-relative::before {
-                content: "";
-                height: 100%;
-                width: 5px;
-                position: absolute;
-                background: #007bff;
-                z-index: 777;
-            }
-            </style>
-
-            <div class="col-md-10 col-sm-12 mt-md-0 mt-2 tab-content">
-
-                <div class="wrap-about border-left-2px fade position-relative tab-pane mb-2 show active"
-                    data-aos="slide-left" role="tabpanel" aria-labelledby="profile-tab-3" id="profile-tab-3">
-                    <div class="card p-2">
-                        <h3>Welcome to AVO A Personal Porfolio Web Agency</h3>
-                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth.</p>
-
-                    </div>
-                </div>
-                <div class="wrap-about border-left-2px fade position-relative tab-pane mb-2 show active"
-                    data-aos="slide-left" role="tabpanel" aria-labelledby="profile-tab-4" id="profile-tab-4">
-                    <div class="card p-2">
-                        <h3>Welcome to AVO A Personal Porfolio Web Agency</h3>
-                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth.</p>
-
-                    </div>
-                </div>
-                <div class="wrap-about border-left-2px fade position-relative tab-pane mb-2 show active"
-                    data-aos="slide-left" role="tabpanel" aria-labelledby="profile-tab-5" id="profile-tab-5">
-                    <div class="card p-2">
-                        <h3>Welcome to AVO A Personal Porfolio Web Agency</h3>
-                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-                            large language ocean. A small river named Duden flows by their place and
-                            supplies it with the necessary regelialia. It is a paradisematic country, in
-                            which roasted parts of sentences fly into your mouth.</p>
-
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-        <div class="row pt-5">
-            <div class="col-md-12">
-                <div class="intro p-md-4 py-md-5 p-2 rounded img" style="background-image: url(images/bg_1.jpg);">
-                    <div class="col-md-6 ftco-animate">
-                        <span>Get Started</span>
-                        <h2>Fill in the brief and get the project estimate</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts.</p>
-                        <p><a href="#" class="btn btn-primary">Get started</a></p>
+            <!-- packege Item end  -->
+            <!-- packege Item  -->
+            <div class="col-xl-4 col-md-3 col-sm-12 mb-5">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm shadow-item">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- packege Item end  -->
+            <!-- packege Item  -->
+            <div class="col-xl-4 col-md-3 col-sm-12 mb-5">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm shadow-item">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- packege Item end  -->
+            <!-- packege Item  -->
+            <div class="col-xl-4 col-md-3 col-sm-12 mb-5">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm shadow-item">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- packege Item end  -->
+            <!-- packege Item  -->
+            <div class="col-xl-4 col-md-3 col-sm-12 mb-5">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm shadow-item">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- packege Item end  -->
+
         </div>
     </div>
 </section>

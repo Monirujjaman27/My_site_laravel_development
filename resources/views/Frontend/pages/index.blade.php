@@ -72,7 +72,7 @@
                         <div class="text text-md-right">
                             <h3>{{ $about->name }}</h3>
                             <p class="text-justify">{{ $about->description }}.</p>
-                            <a href="#" class="btn btn-info">View Details</a>
+                            <a href="{{ route('website.about') }}" class="btn btn-info">View Details</a>
 
                             @foreach($resume as $resume)
                             @if($resume->resume)
@@ -156,16 +156,23 @@
                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                     aria-selected="true">All</a>
             </li>
+
+
             @foreach($category as $category)
-            @if($category->name)
+            <!-- @if($category->name) -->
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile{{ $category->id }}" role="tab"
-                    aria-controls="profile" aria-selected="false">{{ $category->name }}</a>
+                <span id="category-tab">
+                    <a class="nav-link categoryItems" data-toggle="tab" data-id="{{ $category->id }}"
+                        href="#catByPortfolio" role="tab" aria-controls="profile" aria-selected="false">{{ $category->name }}</a>
+                </span>
             </li>
-            @endif
+            <!-- @endif -->
             @endforeach
         </ul>
         <!-- Tabs end -->
+
+
+
         <!-- TabContent -->
         <div class="tab-content mt-2" id="myTabContent">
             <!-- all portfolio content  -->
@@ -196,35 +203,35 @@
                     @endforeach
                 </div>
             </div>
-            <!-- all portfolio content  -->
+
+
             <!-- categorywais portfolios  -->
-            @foreach($catId1 as $catId1)
-            if($)
-            <div class="tab-pane fade" id='profile1' role="tabpanel" aria-labelledby="profile-tab">
+            <div class="tab-pane fade" id="catByPortfolio" role="tabpanel" aria-labelledby="category-tab">
                 <div class="col-md-3 d-flex ftco-animate">
                     <div class="blog-entry justify-content-end">
                         <div class="text">
                             <div class="block-20 img imgoverlay"
-                                style="background-image:url({{ asset('public/storage/portfolio') }}/{{ $catId1->image }});">
+                                style="background-image:url({{ asset('public/storage/portfolio') }});">
                                 <div class="d-flex justify-content-center">
                                     <a href="#" class="btn btn-success previewBtn"><i class="fa fa-eye"></i> Preview
                                         Portfolio</a>
                                 </div>
                             </div>
-                            <h3 class="heading mb-3"><a href="#">{{ $catId1->title }}</a></h3>
+                            <h3 class="heading mb-3"><a href="#"></a></h3>
                             <div class="meta mb-3">
                                 <div><a href="#">June 01, 2020</a></div>
                             </div>
-                            <p>{{ $catId1->description }} <a href="#">Read
-                                    More</a>
+                            <p> <a href="#">Read More</a>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
         </div>
-        <!-- TabContent end -->
+        <!-- all portfolio content  -->
+
+    </div>
+    <!-- TabContent end -->
 
     </div>
     <div class="degree-left"></div>
@@ -246,7 +253,8 @@
                         <div class="testimony-wrap py-4">
                             <div class="text">
                                 <span class="fa fa-quote-left"></span>
-                                <p class="mb-4">{{ Str::limit($testemonial->description, 120) }} <a class="text-danger" href="#">Read More</a></p>
+                                <p class="mb-4">{{ Str::limit($testemonial->description, 120) }} <a class="text-danger"
+                                        href="#">Read More</a></p>
                                 <div class="d-flex align-items-center">
                                     <div class="user-img"
                                         style="background-image: url({{ asset('public/storage/testimonial') }}/{{ $testemonial->image }})">
@@ -265,6 +273,96 @@
         </div>
         <!-- Clients Says About Us section end  -->
 
+
+        <!-- packeges section  -->
+        <div class="row justify-content-center my-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 data-aos="fade-up">Packages</h2>
+            </div>
+        </div>
+        <div class="row packege-slider owl-carousel">
+            <div class="slider-item packege-slider-item">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm">
+                        <div class="card-header bg-info border border-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item packege-slider-item">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">10$ <small class="text-muted">/ Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item packege-slider-item">
+                <div class="d-flex" data-aos="slide-left">
+                    <div class="w-100 card shadow-sm">
+                        <div class="card-header bg-info">
+                            <h4 class="my-0 font-weight-normal">Web Design</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">10$ <small class="text-muted">/ Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>10 users included</li>
+                                <li>2 GB of storage</li>
+                                <li>Email support</li>
+                                <li>Help center access</li>
+                            </ul>
+                            <button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12 text-center mt-5">
+                <div class="btn btn-md btn-info text-center">
+                    <a class="text-white" href="#">Veiw All packeges</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- packeges section  -->
+
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
         <!-- Get Started -->
         <div class="row mt-5">
             <div class="col-md-12" data-aos="slide-left">
@@ -276,86 +374,6 @@
                         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
                             there live the blind texts.</p>
                         <p><a href="#" class="btn btn-primary">Get started</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section bg-light">
-    <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 data-aos="fade-up">Recent Blog</h2>
-            </div>
-        </div>
-        <div class="row d-flex">
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url({{ asset('public/Assets/Frontend') }}/'images/image_1.jpg');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url({{ asset('public/Assets/Frontend') }}/'images/image_2.jpg');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url({{ asset('public/Assets/Frontend') }}/'images/image_3.jpg');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry justify-content-end">
-                    <div class="text">
-                        <h3 class="heading mb-3"><a href="#">Amplify your blockchain team</a></h3>
-                        <a href="blog-single.html" class="block-20 img"
-                            style="background-image: url({{ asset('public/Assets/Frontend') }}/'images/image_4.jpg');">
-                        </a>
-                        <div class="meta mb-3">
-                            <div><a href="#">June 01, 2020</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.
-                        </p>
                     </div>
                 </div>
             </div>
