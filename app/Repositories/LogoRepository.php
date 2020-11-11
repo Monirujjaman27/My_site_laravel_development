@@ -4,6 +4,7 @@ namespace App\Repositories;
 use Illuminate\Http\Request;
 use App\Interfaces\CrudInterface;
 use App\Models\Logo;
+use Image;
 
 class LogoRepository implements CrudInterface{
     /**
@@ -38,7 +39,9 @@ class LogoRepository implements CrudInterface{
              if($request->hasFile('logo')){
                 $logo = $request->logo;
                 $fileName = time().'-'.$logo->getClientoriginalName();
-                $logo->move('public/storage/logo/', $fileName);
+                $image_resize = Image::make($image)
+                ->resize(100, 100)
+                ->save(public_path('storage/logo/'.$fileName));
                 $data->logo = $fileName;
               }
         $data->save();
@@ -60,9 +63,12 @@ class LogoRepository implements CrudInterface{
             unlink(public_path('storage/logo/'.$unlinklogo));
             $fileName = $request->logo;
             $fileName = time().'-'.$fileName->getClientoriginalName();
-            $fileName->move('public/storage/logo/',$fileName);
-            $data->logo = $fileName;
-          }
+            $image_resize = Image::make($image)
+                ->resize(100, 100)
+                ->save(public_path('storage/logo/'.$fileName));
+                $data->logo = $fileName;
+                $data->save();
+            }
              $data->save();
              return $data;
     }

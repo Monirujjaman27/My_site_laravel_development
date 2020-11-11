@@ -28,5 +28,9 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('website.contac
 Route::get('/about', [HomeController::class, 'about'])->name('website.about');
 Route::get('/packages', [HomeController::class, 'packages'])->name('website.packages');
 Route::get('/packageDetails', [HomeController::class, 'packageDetails'])->name('website.packageDetails');
+
+// about page route 
+Route::get('/projects', [HomeController::class, 'projects'])->name('website.projects');
+
 Route::get('/code', [HomeController::class, 'code'])->name('website.code');
 Route::get('/faq', [HomeController::class, 'faq'])->name('website.faq');

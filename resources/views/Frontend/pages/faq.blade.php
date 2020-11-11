@@ -1,24 +1,6 @@
 @extends('Layouts.website')
 @section('content')
 
-<section class="hero-wrap hero-wrap-2 degree-right"
-    style="background-image: url({{ asset('public/Assets/Frontend') }}/images/about.jpg);"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end">
-            <div class="col-md-9 ftco-animate pb-5 mb-5">
-                <div class="pb-5 mb-5">
-                    <h1 class="text-center text-white font-weight-bold pb-5 mb-5">Faq</h1>
-                </div>
-                <p class="breadcrumbs"><span class="mr-2">
-                        <a href="index.html">Home <i class="fa fa-chevron-right"></i></a>
-                    </span> <span>About us <i class="fa fa-chevron-right"></i></span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="ftco-section">
 

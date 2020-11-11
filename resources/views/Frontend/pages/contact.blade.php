@@ -1,7 +1,7 @@
 @extends('Layouts.website')
 @section('content')
 
-<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url('images/bg_2.jpg');"
+<section class="hero-wrap hero-wrap-2 degree-right" style="background-image: url({{ asset('public/Assets/Frontend') }}/images/bg_2.jpg);"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -67,7 +67,10 @@
                             <span class="fa fa-map-marker"></span>
                         </div>
                         <div class="text">
-                            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+                            <p><span>Address:</span>
+                                @if(isset($address)) {{ $address }} @else {{ 'Dinajpur, Rongpur, Bangladesh' }}
+                                @endif
+                            </p>
                         </div>
                     </div>
                     <div class="dbox w-100 d-flex ftco-animate">
@@ -75,7 +78,12 @@
                             <span class="fa fa-phone"></span>
                         </div>
                         <div class="text">
-                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                            <p><span>Phone:</span> <a
+                                    href="tel:@if(isset($phone)) {{ $phone }} @else {{ 'mdmunirujjaman045@gmail.com' }} @endif">
+                                    @if(isset($phone)) {{ $phone }}
+                                    @else {{ '+880151848865' }}
+                                    @endif
+                                </a></p>
                         </div>
                     </div>
                     <div class="dbox w-100 d-flex ftco-animate">
@@ -83,15 +91,47 @@
                             <span class="fa fa-paper-plane"></span>
                         </div>
                         <div class="text">
-                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                            <p><span>Email:</span>
+                                <a
+                                    href="mailto:@if(isset($businessmail)) {{ $businessmail }} @else {{ 'mdmunirujjaman045@gmail.com' }} @endif">
+                                    @if(isset($businessmail))
+                                    {{ $businessmail }} @else
+                                    {{ 'mdmunirujjaman045@gmail.com' }}
+                                    @endif
+                                </a>
+                            </p>
                         </div>
                     </div>
                     <div class="dbox w-100 d-flex ftco-animate">
                         <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="fa fa-globe"></span>
+                            <span class="fa fa-github"></span>
                         </div>
                         <div class="text">
-                            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                            <p><span>Github</span>
+                                <a target="blank" href="https://@if(isset($github)){{ $github }}@else {{ 'https://www.github.com' }}
+                                    @endif">
+                                    @if(isset($github)) {{ $github }}
+                                    @else
+                                    {{ 'Dinajpur, Rongpur, Bangladesh' }}
+                                    @endif
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dbox w-100 d-flex ftco-animate">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fa fa-linkedin"></span>
+                        </div>
+                        <div class="text">
+                            <p><span>Linkdin</span>
+                                <a target="blank" href="https://@if(isset($linkdin)){{ $linkdin }}@else {{ 'https://www.linkdin.com' }}
+                                    @endif">
+                                    @if(isset($linkdin)) {{ $linkdin }}
+                                    @else
+                                    {{ 'Dinajpur, Rongpur, Bangladesh' }}
+                                    @endif
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>

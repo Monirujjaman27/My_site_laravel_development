@@ -1,30 +1,11 @@
 @extends('Layouts.website')
 @section('content')
 
-<section class="hero-wrap hero-wrap-2 degree-right"
-    style="background-image: url({{ asset('public/Assets/Frontend') }}/images/about.jpg);"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-end">
-            <div class="col-md-9 ftco-animate pb-5 mb-5">
-                <div class="pb-5 mb-5">
-                    <h1 class="text-center text-white font-weight-bold pb-5 mb-5">Packages</h1>
-                </div>
-                <p class="breadcrumbs"><span class="mr-2">
-                        <a href="index.html">Home <i class="fa fa-chevron-right"></i></a>
-                    </span> <span>About us <i class="fa fa-chevron-right"></i></span>
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="ftco-section">
 
-    <div class="container">
-        
-    <div class="row">
+    <div class="container-fulid m-md-4 m-sm-0">
+        <div class="row">
             <div class="col-12">
                 <h1 class="text-center font-weight-bold">Coad</h1>
             </div>
@@ -46,8 +27,8 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                
-            <div class="accordion" id="accordionExample">
+
+                <div class="accordion" id="accordionExample">
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h2 class="mb-0">

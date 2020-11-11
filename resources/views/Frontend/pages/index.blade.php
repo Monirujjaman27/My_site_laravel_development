@@ -308,18 +308,23 @@
             <div class="slider-item packege-slider-item">
                 <div class="d-flex" data-aos="slide-left">
                     <div class="w-100 card shadow-sm">
-                        <div class="card-header bg-info">
-                            <h4 class="my-0 font-weight-normal">Web Design</h4>
+                        <div class="card-header bg-info border border-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">10$ <small class="text-muted">/ Hour</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>10 users included</li>
-                                <li>2 GB of storage</li>
-                                <li>Email support</li>
-                                <li>Help center access</li>
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -327,22 +332,28 @@
             <div class="slider-item packege-slider-item">
                 <div class="d-flex" data-aos="slide-left">
                     <div class="w-100 card shadow-sm">
-                        <div class="card-header bg-info">
-                            <h4 class="my-0 font-weight-normal">Web Design</h4>
+                        <div class="card-header bg-info border border-info">
+                            <h4 class="my-0 font-weight-normal text-center">Web Design</h4>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">10$ <small class="text-muted">/ Hour</small></h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>10 users included</li>
-                                <li>2 GB of storage</li>
-                                <li>Email support</li>
-                                <li>Help center access</li>
+                            <h1 class="card-title pricing-card-title text-center">10$ <small class="text-muted">/
+                                    Hour</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4 ">
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 10 users included
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> 2 GB of storage
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Email support
+                                </li>
+                                <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
+                                    access</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-primary">Sign up for free</button>
+                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
 

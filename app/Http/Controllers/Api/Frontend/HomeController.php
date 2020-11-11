@@ -124,6 +124,18 @@ class HomeController extends Controller
     {
         return view('Frontend.pages.faq');
     }
+      /**
+     * Display projects and pags of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function projects()
+    {
+        return view('Frontend.pages.projects');
+    }
+
+
+
 
    
 }
