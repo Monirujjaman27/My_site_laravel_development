@@ -72,12 +72,12 @@
                         <div class="text text-md-right">
                             <h3>{{ $about->name }}</h3>
                             <p class="text-justify">{{ $about->description }}.</p>
-                            <a href="{{ route('website.about') }}" class="btn btn-info">View Details</a>
+                            <a href="{{ route('website.about') }}" class="btn btn-info rounded-pill btn_shadow">View Details</a>
 
                             @foreach($resume as $resume)
                             @if($resume->resume)
                             <a href="{{route('downloadResume', ['file'=>$resume->resume]) }}"
-                                class="btn btn-success">Download Resume</a>
+                                class="btn btn-success rounded-pill btn_shadow">Download Resume</a>
                             @endif
                             @endforeach
                         </div>
@@ -147,7 +147,7 @@
     <div class="container">
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 heading-section text-center ftco-animate">
-                <h2 data-aos="fade-up">Our Works</h2>
+                <h2 data-aos="fade-up">Works</h2>
             </div>
         </div>
         <!-- Tabs  -->
@@ -163,7 +163,8 @@
             <li class="nav-item" role="presentation">
                 <span id="category-tab">
                     <a class="nav-link categoryItems" data-toggle="tab" data-id="{{ $category->id }}"
-                        href="#catByPortfolio" role="tab" aria-controls="profile" aria-selected="false">{{ $category->name }}</a>
+                        href="#catByPortfolio" role="tab" aria-controls="profile"
+                        aria-selected="false">{{ $category->name }}</a>
                 </span>
             </li>
             <!-- @endif -->
@@ -229,6 +230,14 @@
             </div>
         </div>
         <!-- all portfolio content  -->
+
+        <div class="row">
+            <div class="col-md">
+                <div class="text-center">
+                    <a href="{{ route('website.projects') }}" class="btn btn-success rounded-pill btn_shadow">Viwe all works</a>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- TabContent end -->
@@ -300,7 +309,7 @@
                                 <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
                                     access</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                            <button type="button" class="btn btn-lg btn-block btn-success rounded-pill">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -324,7 +333,7 @@
                                 <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
                                     access</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                            <button type="button" class="btn btn-lg btn-block btn-success rounded-pill">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -348,7 +357,7 @@
                                 <li class="text-center m-3 border-bottom"> <i class="fa fa-check"></i> Help center
                                     access</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-secondary">Order Now</button>
+                            <button type="button" class="btn btn-lg btn-block btn-success rounded-pill">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -359,8 +368,8 @@
 
         <div class="row">
             <div class="col-12 text-center mt-5">
-                <div class="btn btn-md btn-info text-center">
-                    <a class="text-white" href="#">Veiw All packeges</a>
+                <div class="btn btn-md btn-success rounded-pill text-center btn_shadow">
+                    <a class="text-white" href="{{ route('website.packages') }}">Veiw All packeges</a>
                 </div>
             </div>
         </div>

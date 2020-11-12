@@ -15,6 +15,13 @@ class CreatePackegesTable extends Migration
     {
         Schema::create('packeges', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->integer('rate');
+            $table->integer('offerRate')->nullable();
+            $table->string('thumbnail');
+            $table->string('animation')->nullable();
+            $table->string('status')->default('0')->nullable;
             $table->timestamps();
         });
     }

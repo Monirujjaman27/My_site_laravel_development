@@ -15,6 +15,8 @@ class CreateCodesTable extends Migration
     {
         Schema::create('codes', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
             $table->timestamps();
         });
     }

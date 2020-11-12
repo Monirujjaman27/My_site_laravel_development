@@ -1,7 +1,5 @@
 @extends('Layouts.website')
 @section('content')
-
-
 <section class="ftco-section">
 
     <div class="container-fulid m-md-4 m-sm-0">
@@ -11,213 +9,37 @@
             </div>
         </div>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                    aria-selected="true">Home</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                    aria-controls="profile" aria-selected="false">Profile</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                    aria-controls="contact" aria-selected="false">Contact</a>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        @php $i = 1 @endphp
+        @foreach($code as $code)
+        <div class="accordion mb-2" id="accordionExample{{ $code->id }}">
+            <div class="card border-info">
+                <div class="card-header bg-info" id="headingOne{{ $code->id }}">
+                    <h1 class="mb-0">
+                        <button class="btn btn-link btn-block text-left text-dark text-decoration-none font-weight-bold"
+                            type="button" data-toggle="collapse" data-target="#collapseOne{{ $code->id }}"
+                            aria-expanded="true" aria-controls="collapseOne{{ $code->id }}">
+                            <span class="bg-white rounded p-1">#{{ $i}} {{ $code->title }}</span>
+                            <div class="float-right">
+                                <i class="fa fa-caret-down d-flex"> </i>
+                            </div>
+                        </button>
+                    </h1>
+                </div>
 
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    Collapsible Group Item #3
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
+                <div id="collapseOne{{ $code->id }}" class="collapse" aria-labelledby="headingOne{{ $code->id }}"
+                    data-parent="#accordionExample{{ $code->id }}">
+                    <div class="card-body">
+                        {{ $code->description }}
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
-                                </button>
-                            </h2>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    Collapsible Group Item #3
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid.
-                                3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
-                                nesciunt
-                                laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                single-origin
-                                coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                wes
-                                anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                Leggings
-                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
-                                haven't heard
-                                of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
         </div>
+        @php $i++ @endphp
+        @endforeach
 
 
 
 
     </div>
 </section>
-
-
-
 @endsection

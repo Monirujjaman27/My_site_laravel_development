@@ -106,24 +106,7 @@ class HomeController extends Controller
     {
         return view('Frontend.pages.packageDetails');
     }
-      /**
-     * Display code page of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function code()
-    {
-        return view('Frontend.pages.code');
-    }
-      /**
-     * Display faq page of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function faq()
-    {
-        return view('Frontend.pages.faq');
-    }
+
       /**
      * Display projects and pags of the resource.
      *

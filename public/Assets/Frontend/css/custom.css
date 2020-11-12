@@ -71,3 +71,7 @@ opacity: .8;
         .shadow-item:hover{
           box-shadow: none !important;
       }
+
+        .btn_shadow {
+          box-shadow: 0 1rem 1rem black !important;
+      }

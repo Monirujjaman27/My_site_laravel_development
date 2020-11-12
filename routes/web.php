@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Frontend\HomeController;
+use App\Http\Controllers\Api\Frontend\ExtrapagesController;
 
 
 /*
@@ -32,5 +33,8 @@ Route::get('/packageDetails', [HomeController::class, 'packageDetails'])->name('
 // about page route 
 Route::get('/projects', [HomeController::class, 'projects'])->name('website.projects');
 
-Route::get('/code', [HomeController::class, 'code'])->name('website.code');
-Route::get('/faq', [HomeController::class, 'faq'])->name('website.faq');
+Route::get('/code', [ExtrapagesController::class, 'code'])->name('website.code');
+
+
+
+Route::get('/faq', [ExtrapagesController::class, 'faq'])->name('website.faq');

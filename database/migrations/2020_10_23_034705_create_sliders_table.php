@@ -17,9 +17,11 @@ class CreateSlidersTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->integer('counter');
             $table->string('counterText');
+            $table->integer('counter');
             $table->string('sliderbg');
+            $table->string('buttonName')->nullable();
+            $table->string('buttonUrl')->nullable();
             $table->timestamps();
         });
     }

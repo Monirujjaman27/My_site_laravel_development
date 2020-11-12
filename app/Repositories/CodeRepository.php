@@ -3,25 +3,25 @@
 namespace App\Repositories;
 use Illuminate\Http\Request;
 use App\Interfaces\CrudInterface;
-use App\Models\Category;
+use App\Models\Code;
 
-class CategoryRepository implements CrudInterface{
+class CodeRepository implements CrudInterface{
 
     public function getAll(){
-        $getdata = Category::get();
+        $getdata = Code::get();
         return $getdata;
     }
 
     public function fineById($id){
-        $GetdataById = Category::find($id);
+        $GetdataById = Code::find($id);
         return $GetdataById;
 
     }
 
     public function create(Request $request){
 
-        $data = new Category;
-        $data->name = ucfirst($request->name);
+        $data = new Code;
+        $data->title = ucfirst($request->title);
         $data->description = ucfirst($request->description);
         $data->save();
         return $data;
@@ -29,7 +29,7 @@ class CategoryRepository implements CrudInterface{
  
     public function edit(Request $request, $id){
         $data = $this->fineById($id);
-        $data->name = ucfirst($request->name);
+        $data->title = ucfirst($request->title);
         $data->description = ucfirst($request->description);
         $data->save();        
         return $data;

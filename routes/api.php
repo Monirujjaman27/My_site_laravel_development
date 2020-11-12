@@ -12,6 +12,8 @@ use App\Http\Controllers\Api\Backend\ResumeControllers;
 use App\Http\Controllers\Api\Backend\PortfolioController;
 use App\Http\Controllers\Api\Backend\SiteDefaultController;
 use App\Http\Controllers\Api\Backend\LogoController;
+use App\Http\Controllers\Api\Backend\FaqController;
+use App\Http\Controllers\Api\Backend\CodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +60,7 @@ route::apiResource('portfolio', PortfolioController::class);
 route::apiResource('siteDefault', SiteDefaultController::class);
 // Logo Resource Routes
 route::apiResource('logo', LogoController::class);
+// FaqController Resource Routes
+route::apiResource('faq', FaqController::class);
+// CodeController Resource Routes
+route::apiResource('code', CodeController::class);

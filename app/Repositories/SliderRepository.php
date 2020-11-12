@@ -35,10 +35,12 @@ class SliderRepository implements CrudInterface{
      */
     public function create(Request $request){
         $data = new Slider;
-        $data->title    = ucfirst($request->title);
-        $data->subtitle = ucfirst($request->subtitle);
-        $data->counter  = $request->counter;
+        $data->title       = ucfirst($request->title);
+        $data->subtitle    = ucfirst($request->subtitle);
+        $data->counter     = $request->counter;
         $data->counterText = ucfirst($request->counterText);
+        $data->buttonName  = $request->buttonName;
+        $data->buttonUrl   = $request->buttonUrl;
 
          if($request->hasFile('sliderbg')){
             $image = $request->sliderbg;
@@ -66,6 +68,8 @@ class SliderRepository implements CrudInterface{
         $data->subtitle = ucfirst($request->subtitle);
         $data->counter  = $request->counter;
         $data->counterText = ucfirst($request->counterText);
+        $data->buttonName  = $request->buttonName;
+        $data->buttonUrl   = $request->buttonUrl;
         
         $unlinkImgName  = $data->sliderbg;
         if($request->hasFile('sliderbg')){
